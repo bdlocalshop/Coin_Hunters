@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #120e0e;
+  --color-card: #181313;
+  --color-card-hover: #211919;
+  --color-card-border: #261d22;
+  --color-coral: #ff5a36;
+  --color-coral-dark: #ea4823;
+  --color-gold: #facc15;
+  --color-emerald: #10b981;
+}
+
+:root {
+  --background: #120e0e;
+  --foreground: #f3f4f6;
+}
+
+body {
+  background-color: #120e0e;
+  color: #f3f4f6;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #120e0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #261d22;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5a36;
+}
+
+/* Live ticker animation */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 35s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}

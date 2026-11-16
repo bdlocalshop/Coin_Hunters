@@ -1,0 +1,41 @@
+# Coin Hunters Monorepo Root .gitignore
+
+# UI References
+docs/ui-reference/
+doc/ui-reference/
+
+# Environment files
+backend/.env
+backend/.env.backup
+backend/.env.production
+frontend/.env*.local
+
+# Dependencies
+backend/vendor/
+frontend/node_modules/
+
+# Next.js Build Outputs
+frontend/.next/
+frontend/out/
+
+# Laravel Storage & Cache
+backend/storage/*.key
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*
+!backend/storage/framework/cache/.gitignore
+!backend/storage/framework/sessions/.gitignore
+!backend/storage/framework/views/.gitignore
+!backend/bootstrap/cache/.gitignore
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
